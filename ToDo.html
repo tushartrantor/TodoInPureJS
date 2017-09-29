@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <style>
+
+      * {
+        box-sizing: border-box;
+      }
+      html, body {height:100%;}
+      #add-todo-section,
+      #display-todo-section {
+        position: relative;
+        float: left;
+        height: 100%;
+        width: 50%;
+        border: 1px solid black;
+        border-radius: 10px;
+      }
+
+      #add-todo-wrapper {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+       #add-todo-wrapper #todo-text {
+          border: 1px solid black;
+          padding: 10px;
+       }
+       #add-todo-wrapper button {
+          height: 37px;
+          width: 70px;
+          border: 1px solid black;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- Add Section -->
+    <section id="add-todo-section">
+      <div id="add-todo-wrapper">
+        <input type="text" id="todo-text" placeholder="Add an item"></input>
+        <button onclick="addTodo(document.getElementById('todo-text').value)">Add</button>
+      </div>
+    </section>
+    
+    <!-- Display All TODO items Section -->
+    <section id="display-todo-section">
+      <ul id="todo-list">
+        
+      </ul>
+    </section>
+
+    <script src="ToDo.js"></script>
+  </body>
+</html>
